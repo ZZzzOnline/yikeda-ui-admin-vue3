@@ -15,6 +15,7 @@ import topLevelAwait from 'vite-plugin-top-level-await'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import UnoCSS from 'unocss/vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 export function createVitePlugins() {
   const root = process.cwd()
@@ -25,6 +26,7 @@ export function createVitePlugins() {
   }
 
   return [
+    vueDevTools(),
     Vue(),
     VueJsx(),
     UnoCSS(),
